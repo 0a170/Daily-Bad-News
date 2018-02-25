@@ -1,0 +1,28 @@
+body {
+   margin: 0 auto;
+}
+
+.button-div {
+   display: inline-block;
+   margin: 0 auto;
+   margin-bottom: 10px;
+}
+
+.col-sm-4 {
+   border: 1px solid black;
+}
+
+.article-div {
+   animation: slideUp 0.5s;
+   -webkit-animation: slideUp 0.5s;
+}
+
+@keyframes slideUp {
+   0% {bottom: -400px; opacity: 0;}
+   100% {bottom: 0px; opacity: 1;}
+}
+
+@-webkit-keyframes slideIn {
+   0% {bottom: -400px; opacity: 0;}
+   100% {bottom: 0px; opacity: 1;}
+}
