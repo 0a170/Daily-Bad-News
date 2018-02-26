@@ -3,9 +3,7 @@ var request = require('request');
 var path = require('path');
 
 var app = express();
-var articleTitles = [];
-var articleDescriptions = [];
-var articles = {};
+
 
 app.set('views,', 'views');
 app.set('view engine', 'pug');
@@ -17,7 +15,14 @@ app.get('/', function(req, res) {
 });
 
 app.get('/getNews', function(req, res) {
-   request('http://newsapi.org/v2/top-headlines?q=bitcoin&from=2018-02-21&to=2018-02-21&sortBy=popularity&apiKey=0134dde2256b4b0094655407e52a5f86',
+   var date = new Date();
+   var month = date.getMonth() + 1;
+   var day = date.getDate();
+   var year = date.getFullYear();
+   var today = year + "-" + day + "-" + month;
+
+   request('http://newsapi.org/v2/everything?q=tragedy&from=' + today + '&to=' + today + '&sortBy=popularity&apiKey=0134dde2256b4b0094655407e52a5f86',
+   //request('http://newsapi.org/v2/everything?q=tragedy&from=2018-02-21&to=2018-02-21&sortBy=popularity&apiKey=0134dde2256b4b0094655407e52a5f86',
       function(error, response, body) {
          if(!error) {
             var body = JSON.parse(body);
