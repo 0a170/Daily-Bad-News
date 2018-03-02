@@ -2,17 +2,30 @@ body {
    margin: 0 auto;
 }
 
-.button-div {
-   display: inline-block;
-   margin: 0 auto;
-   margin-bottom: 10px;
+p {
+   margin: 0;
 }
 
-.col-sm-4 {
-   border: 1px solid black;
+.header-div {
+   margin: 0 auto;
+}
+
+#getNewsButton {
+   float: left;
+}
+
+.divider {
+   margin-top: 5px !important;
+   margin-bottom: 5px !important;
+   background: black;
+   height: 1px;
+   width: 100%;
+   margin: 0 auto;
 }
 
 .article-div {
+   border: 0;
+   padding-top: 15px;
    animation: slideUp 0.5s;
    -webkit-animation: slideUp 0.5s;
 }
