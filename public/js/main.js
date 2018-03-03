@@ -1,11 +1,14 @@
 $(document).ready(function() {
-   $("#getNewsButton").on('click', function() {
+   $(".getNewsButton").on('click', function() {
       var content = "";
+      var url = '/' + $(this).val();
+
       $.ajax({
          type: 'GET',
-         url: '/getNews',
+         url: url,
          dataType: 'JSON',
          success: function(response) {
+            $('#content').empty();
             var newsArticles = response;
             for(let i = 0; i < newsArticles.length; i++) {
                content += '<div class="col-sm-4 article-div">'

@@ -6,6 +6,10 @@ p {
    margin: 0;
 }
 
+button {
+   margin: 10px !important;
+}
+
 .header-div {
    margin: 0 auto;
 }

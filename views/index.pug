@@ -4,13 +4,14 @@ html
       title Today's Bad News
       link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
       link(rel='stylesheet', href='css/style.css')
-
    body
       div.container-fluid
          div.row
             div.col-12-sm.header-div
                h1 Today's Bad News
-               button#getNewsButton.btn.btn-primary(type="button") Go
+               button#tragedyButton.getNewsButton.btn.btn-danger(type="button", value="getTragedy") Tragedy
+               button#economyButton.getNewsButton.btn.btn-warning(type="button", value="getEconomy") Economy
+               button#socialButton.getNewsButton.btn.btn-primary(type="button", value="getSocial") Social
          div#content.row
    script(src='js/jquery-3.2.1.min.js')
    script(src='js/main.js')
